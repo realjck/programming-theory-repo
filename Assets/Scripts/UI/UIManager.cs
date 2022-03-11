@@ -21,8 +21,6 @@ public class UIManager : MonoBehaviour
 
     public void ClickAddButton(int animalIndex){
         tutoscreen.SetActive(false);
-        //TODO
-        Debug.Log("spawn animal "+animalIndex);
-        ShowMenu(false);
+        SpawnManager.Instance.InstantiateAnimal(animalIndex);
     }
 }
