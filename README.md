@@ -9,8 +9,8 @@ _App hosted on Github Pages in this repository (WebGL)_
 
 This project shows the four pillars of object-oriented programming:
 
-* **Abstraction**: Each animal is created from a parent class 'Animal.cs'
-* **Encapsulation**: Speed of each animal encapsulates a method to avoid negative speeds
+* **Abstraction**: Animals can change direction ('AssignRandomDirection()') and do their action ('DoAction()')
+* **Encapsulation**: Speed of animals encapsulates a method to avoid negative speeds
 * **Inheritance**: Chicken, Lion and Penguin inherit their wandering behaviour from the parent class 'Animal.cs'
 * **Polymorphism**: Each type of animal has its own overriden method 'DoAction()' that it plays randomly
 
