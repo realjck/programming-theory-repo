@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Penguin : Animal
 {
+    // POLYMORPHISM
     private float speedMultiplier = 2;
     protected override void DoAction()
     {

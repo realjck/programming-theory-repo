@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Lion : Animal
 {
+    // POLYMORPHISM
     private float speedBackup;
     protected override void DoAction()
     {

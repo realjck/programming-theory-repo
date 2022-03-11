@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Animal : MonoBehaviour
 {
+    // ENCAPSULATION
     private float speed = 3;
     public float Speed{
         get{
@@ -41,6 +42,7 @@ public abstract class Animal : MonoBehaviour
             AssignRandomDirection();
         }
     }
+    // ABSTRACTION
     private void AssignRandomDirection(){
         float newOrientation = transform.rotation.y + 180 + Random.Range(-90,90);
         transform.Rotate(new Vector3(0, newOrientation, 0));
