@@ -19,9 +19,16 @@ public class SpawnManager : MonoBehaviour
     public void InstantiateAnimal(int index){
         // place animal in world
         Vector3 randomPos = new Vector3(Random.Range(-boundX,boundX), 0, Random.Range(-boundZ, boundZ));
-        Instantiate(animals[index], randomPos, animals[index].transform.rotation);
+        GameObject newAnimal = Instantiate(animals[index], randomPos, animals[index].transform.rotation);
+        newAnimal.tag = "Animal";
         // poof particles
         Instantiate(poofer, randomPos + Vector3.up, poofer.transform.rotation);
         poofer.Play();
+    }
+    public void DestroyAll(){
+        GameObject[] allAnimals = GameObject.FindGameObjectsWithTag("Animal");
+        for (int i=0; i<allAnimals.Length; i++){
+            Destroy(allAnimals[i]);
+        }
     }
 }
