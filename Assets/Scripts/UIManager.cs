@@ -5,6 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject splashscreen;
+    [SerializeField] private GameObject tutoscreen;
     [SerializeField] private GameObject menuButtons;
     private bool isMenuOpen;
 
@@ -19,6 +20,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void ClickAddButton(int animalIndex){
+        tutoscreen.SetActive(false);
         //TODO
         Debug.Log("spawn animal "+animalIndex);
         ShowMenu(false);
