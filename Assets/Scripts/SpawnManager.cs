@@ -8,8 +8,16 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject[] animals;
     [SerializeField] private float boundX;
     [SerializeField] private float boundZ;
+    // particles
     [SerializeField] private ParticleSystem poofer;
     [SerializeField] private ParticleSystem destroyPoofer;
+    // sounds
+    [SerializeField] private AudioClip instantiateSound;
+    [SerializeField] private AudioClip destroySound;
+    private AudioSource audioSource;
+    void Start(){
+        audioSource = GetComponent<AudioSource>();
+    }
     void Awake(){
         if (Instance != null){
             Destroy(gameObject);
@@ -24,12 +32,17 @@ public class SpawnManager : MonoBehaviour
         newAnimal.tag = "Animal";
         // poof particles
         Instantiate(poofer, randomPos + Vector3.up, poofer.transform.rotation);
+        // sound
+        audioSource.PlayOneShot(instantiateSound);
     }
     public void DestroyAll(){
+        // get animals and destroy them
         GameObject[] allAnimals = GameObject.FindGameObjectsWithTag("Animal");
         for (int i=0; i<allAnimals.Length; i++){
             Instantiate(destroyPoofer, allAnimals[i].transform.position + Vector3.up, destroyPoofer.transform.rotation);
             Destroy(allAnimals[i]);
         }
+        // sound
+        audioSource.PlayOneShot(destroySound);
     }
 }
