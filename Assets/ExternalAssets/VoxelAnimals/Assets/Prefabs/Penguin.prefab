@@ -172,8 +172,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4936587561821370}
   - component: {fileID: 95485790526497962}
-  - component: {fileID: 65712882847760486}
   - component: {fileID: 54786317403076396}
+  - component: {fileID: 4781567456898987857}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Untagged
@@ -215,19 +215,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &65712882847760486
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755646104177140}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.44, y: 1.48, z: 1.49}
-  m_Center: {x: 0, y: 0.77, z: 0}
 --- !u!54 &54786317403076396
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -244,6 +231,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &4781567456898987857
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755646104177140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.77
+  m_Height: 1.86
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &1855729412434242
 GameObject:
   m_ObjectHideFlags: 0
