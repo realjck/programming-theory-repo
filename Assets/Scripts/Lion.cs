@@ -7,7 +7,7 @@ public class Lion : Animal
     private float speedBackup;
     protected override void DoAction()
     {
-        // LION SLEEPS 2.5 seconds
+        // lion sleeps 2.5 seconds
         speedBackup = Speed;
         Speed = 0;
         _animalAnim.SetInteger("Walk",0);

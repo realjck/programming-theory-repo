@@ -17,6 +17,7 @@ public abstract class Animal : MonoBehaviour
             }
         }
     }
+    // protected values that children have access to:
     private protected Rigidbody _animalRb;
     private protected Animator _animalAnim;
     // Start is called before the first frame update

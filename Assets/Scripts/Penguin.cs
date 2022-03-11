@@ -7,7 +7,7 @@ public class Penguin : Animal
     private float speedMultiplier = 2;
     protected override void DoAction()
     {
-        // penguin speeds up during 4.5 seconds
+        // penguin sprints during 4.5 seconds
         Speed *= speedMultiplier;
         StartCoroutine(WaitForRun());
     }

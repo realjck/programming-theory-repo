@@ -28,7 +28,7 @@ public class SpawnManager : MonoBehaviour
     public void DestroyAll(){
         GameObject[] allAnimals = GameObject.FindGameObjectsWithTag("Animal");
         for (int i=0; i<allAnimals.Length; i++){
-            Instantiate(destroyPoofer, allAnimals[i].transform.position, destroyPoofer.transform.rotation);
+            Instantiate(destroyPoofer, allAnimals[i].transform.position + Vector3.up, destroyPoofer.transform.rotation);
             Destroy(allAnimals[i]);
         }
     }
