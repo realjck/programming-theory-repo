@@ -3107,6 +3107,7 @@ MonoBehaviour:
   boundX: 6
   boundZ: 14
   poofer: {fileID: 19800018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+  destroyPoofer: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
 --- !u!1001 &1780296110
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private float boundX;
     [SerializeField] private float boundZ;
     [SerializeField] private ParticleSystem poofer;
+    [SerializeField] private ParticleSystem destroyPoofer;
     void Awake(){
         if (Instance != null){
             Destroy(gameObject);
@@ -23,11 +24,11 @@ public class SpawnManager : MonoBehaviour
         newAnimal.tag = "Animal";
         // poof particles
         Instantiate(poofer, randomPos + Vector3.up, poofer.transform.rotation);
-        poofer.Play();
     }
     public void DestroyAll(){
         GameObject[] allAnimals = GameObject.FindGameObjectsWithTag("Animal");
         for (int i=0; i<allAnimals.Length; i++){
+            Instantiate(destroyPoofer, allAnimals[i].transform.position, destroyPoofer.transform.rotation);
             Destroy(allAnimals[i]);
         }
     }
